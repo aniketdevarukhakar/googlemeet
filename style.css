@@ -23,7 +23,7 @@ li {
 .google-meet-main-panel {
     display: flex;
     justify-content: space-between;
-    height: calc(100% - 80px);
+    height: calc(100vh - 80px);
     padding: 15px;
     overflow: hidden;
     position: relative;
@@ -508,9 +508,10 @@ button.cross:hover {
 
 
 .scrollbar {
-    height: 100%;
-    overflow-y: scroll;
-    margin-right: 8px;
+    max-height: 100vh; /* Maximum height is set to the viewport height */
+    overflow-y: auto;  /* Add vertical scrollbar when content exceeds max-height */
+    padding: 10px;     /* Optional: Add some padding for better aesthetics */
+    box-sizing: border-box; /* Include padding and borders in the element's size */
 }
 
 .scrollbar::-webkit-scrollbar {

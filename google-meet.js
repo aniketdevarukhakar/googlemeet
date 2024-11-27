@@ -24,7 +24,6 @@ actionBTN.forEach((item) => {
     item.addEventListener("click", (e) => {
         let findDiv = document.querySelector("." + e.target.id);
         document.querySelectorAll(".action-toggle .active, .action-panel .active").forEach((activeClass) => {
-            console.log(activeClass);
             if (activeClass !== divToggle && activeClass !== findDiv && activeClass !== item) {
                 activeClass.classList.remove("active");
                 divToggle.classList.remove("active");
@@ -37,16 +36,19 @@ actionBTN.forEach((item) => {
         item.classList.toggle("active");
         divToggle.classList.toggle("active");
         findDiv.classList.toggle("active");
+
+        crossBtn.forEach((btn, idx) => {
+            btn.addEventListener("click", function () {
+                this.closest(".commonClass").classList.remove("active");
+                this.closest(".action-toggle").classList.remove("active");
+                item.classList.remove("active");
+                console.log(item);
+            })
+        });
     })
 });
 
-crossBtn.forEach((btn, idx) => {
-    btn.addEventListener("click", function () {
-        this.closest(".commonClass").classList.remove("active");
-        this.closest(".action-toggle").classList.remove("active");
-        actionBTN[idx].classList.remove("active");
-    })
-});
+
 
 assignInitial.forEach((initial, index) => {
     let fullName = peopleName[index].innerText; 
