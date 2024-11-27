@@ -16,14 +16,14 @@ li {
 }
 
 .main-container {
-    height: 90vh;
+    height: 95vh;
     overflow: hidden;
 }
 
 .google-meet-main-panel {
     display: flex;
     justify-content: space-between;
-    height: calc(90vh - 80px);
+    height: calc(95vh - 80px);
     padding: 15px;
     overflow: hidden;
     position: relative;
