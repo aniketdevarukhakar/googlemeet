@@ -648,7 +648,7 @@ button.cross:hover {
     }
 }
 
-@media screen and (min-width: 360px) {
+/* @media screen and (min-width: 360px) {
     .my-panel {
         bottom: -170px;
     }
@@ -659,19 +659,19 @@ button.cross:hover {
     .google-meet-main-panel {
         height: calc(100% - 80px);
     } 
-}
+} */
 
 @media screen and (min-width: 375px) {
     .my-panel {
-        bottom: -80px;
+        bottom: -40px;
     }
-    .main-container {
+    /* .main-container {
         height: 93vh;
         overflow: hidden;
     }    
     .google-meet-main-panel {
         height: calc(100% - 80px);
-    } 
+    }  */
 }
 
 @media screen and (min-width: 390px) and (max-width: 414px) {
