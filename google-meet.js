@@ -31,6 +31,7 @@ actionBTN.forEach((item) => {
             }
         });
 
+        moreOptionBtn.classList.remove("active");
         actionPanal.classList.remove("active");
         moreOptionPanel.classList.remove("active");
         item.classList.toggle("active");
@@ -42,7 +43,8 @@ actionBTN.forEach((item) => {
                 this.closest(".commonClass").classList.remove("active");
                 this.closest(".action-toggle").classList.remove("active");
                 item.classList.remove("active");
-                console.log(item);
+                moreOptionBtn.classList.remove("avtive");
+                // console.log(item);
             })
         });
     })

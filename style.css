@@ -676,7 +676,7 @@ button.cross:hover {
 
 @media screen and (min-width: 390px) and (max-width: 414px) {
     .my-panel {
-        bottom: unset;
+        bottom: -150px;
     }
     .main-container {
         height: 93vh;
