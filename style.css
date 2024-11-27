@@ -508,10 +508,9 @@ button.cross:hover {
 
 
 .scrollbar {
-    max-height: 100vh; /* Maximum height is set to the viewport height */
-    overflow-y: auto;  /* Add vertical scrollbar when content exceeds max-height */
-    padding: 10px;     /* Optional: Add some padding for better aesthetics */
-    box-sizing: border-box; /* Include padding and borders in the element's size */
+    max-height: 100vh; 
+    overflow-y: auto;  
+    padding: 10px;   
 }
 
 .scrollbar::-webkit-scrollbar {
@@ -648,30 +647,10 @@ button.cross:hover {
     }
 }
 
-/* @media screen and (min-width: 360px) {
-    .my-panel {
-        bottom: -170px;
-    }
-    .main-container {
-        height: 93vh;
-        overflow: hidden;
-    }   
-    .google-meet-main-panel {
-        height: calc(100% - 80px);
-    } 
-} */
-
 @media screen and (min-width: 375px) {
     .my-panel {
         bottom: -40px;
     }
-    /* .main-container {
-        height: 93vh;
-        overflow: hidden;
-    }    
-    .google-meet-main-panel {
-        height: calc(100% - 80px);
-    }  */
 }
 
 @media screen and (min-width: 390px) and (max-width: 414px) {
