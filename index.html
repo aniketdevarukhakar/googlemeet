@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Meet</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="google-meet.png" rel="shortcut icon" />
+</head>
+
+<body>
+    <div class="bg-black main-container">
+        <div class="google-meet-main-panel">
+            <div class="notification"><span class="whenOFF"><i class="fa-solid fa-microphone-slash"></i>
+                    &nbsp;&nbsp;Microphone off</span><span class="whenON"><i class="fa-solid fa-microphone"></i>
+                    &nbsp;&nbsp;Microphone on</span></div>
+            <!-- main people screen -->
+            <div class="peoples" id="peoples">
+                <ul class="peoples-items">
+                
+                </ul>
+                <div class="my-panel" id="myPanel">
+                    <div class="mute-activity">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+                    <div class="People-image">
+                        <!-- <img src="" alt="name" /> -->
+                        <div class="onHoverChange">
+                            <div class="assignInitial"></div>
+                            <div class="hoverDiv">
+                                <button class="btnHover"><i class="fa-solid fa-thumbtack"></i></button>
+                                <button class="btnHover"><i class="fa-solid fa-wand-magic-sparkles"></i></button>
+                                <button class="btnHover"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="people-name ownerName">
+                        Aniket Avi
+                    </div>
+                </div>
+            </div>
+            <!-- action buttons div toggle -->
+            <div class="action-toggle" id="action-toggle">
+                <!-- info -->
+                <div class="action-info commonClass meetinfo scrollbar" id="toggleInfo">
+                    <div class="action-header">
+                        <h2>Meeting details </h2>
+                        <button class="cross"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="joining-info">
+                        <h4>Joining info</h4>
+                        <p>https://meet.google.com/aam-goai-oyi</p>
+                        <button class="copylink"><i class="fa-regular fa-copy"></i> Copy joining info</button>
+                        <hr>
+                        <div class="calendar-tag">
+                            <p>Google Calendar attachments will be shown here</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- people list -->
+                <div class="action-peoples commonClass users scrollbar" id="toggleUsers">
+                    <div class="action-header">
+                        <h2>People </h2>
+                        <button class="cross"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="people-item">
+
+                    </div>
+                </div>
+                <!-- chatbox -->
+                <div class="action-chatbox commonClass chats scrollbar" id="toggleChat">
+                    <div class="action-header">
+                        <h2>In-call messages</h2>
+                        <button class="cross"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </div>
+                <!-- other -->
+                <div class="action-other commonClass activity scrollbar" id="toggleOther">
+                    <div class="action-header">
+                        <h2>Activities</h2>
+                        <button class="cross"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </div>
+                <!-- lock -->
+                <div class="action-lock commonClass lock scrollbar" id="toggleLock">
+                    <div class="action-header">
+                        <h2>Host controls</h2>
+                        <button class="cross"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="google-meet-bottom-panel">
+            <div class="bottom-panel-inner">
+                <!-- Time  -->
+                <div class="time">
+                    <p>10:12 &nbsp;&nbsp;|&nbsp;&nbsp;meet-links-keyword</p>
+                </div>
+                <!-- middle action  -->
+                <div class="middle-action-buttons">
+                    <div class="mobileView">
+                        <div class="moreOptions">
+                            <ul>
+                                <li><button class="btn-mdl hoverChange"><i
+                                            class="fa-solid fa-closed-captioning"></i></button>
+                                            <span class="mobileCaption">Show captions</span></li>
+                                <li><button class="btn-mdl hoverChange"><i
+                                            class="fa-solid fa-square"></i></button>
+                                            <span class="mobileCaption">Present
+                                                now</span></li>
+                                <li><button class="btn-action" id="meetinfo"><i class="fa-solid fa-circle-info"></i></button>
+                                    <span class="mobileCaption">Meeting Details</span></li>
+                                <li><button class="btn-action" id="users"><i
+                                            class="fa-solid fa-user-group"></i></button> <span class="count-badge">3</span>
+                                            <span class="mobileCaption">People</span>
+                                </li>
+                                <li><button class="btn-action" id="chats"><i class="fa-solid fa-message"></i></button><span class="mobileCaption">Chat with
+                                    everyone</span></li>
+                                <li><button class="btn-action" id="activity"><i
+                                            class="fa-regular fa-circle-xmark"></i></button>
+                                            <span class="mobileCaption">Activities</span></li>
+                                <li><button class="btn-action" id="lock"><i class="fa-solid fa-lock"></i></button><span class="mobileCaption">Host
+                                    controls</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><button class="btn-mdl mute"><span class="whenOff">Turn off microphone (CTRL +
+                                    D)</span><span class="whenOn">Turn on microphone (CTRL + D)</span><i
+                                    class="fa-solid fa-microphone"></i></button></li>
+                        <li><button class="btn-mdl"><span class="whenOff">Turn off camera (CTRL + E)</span><span
+                                    class="whenOn">Turn on camera (CTRL + E)</span><i
+                                    class="fa-solid fa-video"></i></button></li>
+                        <li><button class="btn-mdl hoverChange"><span class="whenOff">Turn on captions
+                                    (c)</span><span class="whenOn">Turn off captions (c)</span><i
+                                    class="fa-solid fa-closed-captioning"></i></button></li>
+                        <li class="hideInMob"><button class="btn-mdl hoverChange"><span class="whenOff">Present
+                                    now</span><span class="whenOn">You are presenting</span><i
+                                    class="fa-solid fa-square"></i></button></li>
+                        <li class="hideInMob"><button class="btn-mdl hoverChange"><span class="whenOff">More Option</span><span
+                                    class="whenOn">More Option panel</span><i
+                                    class="fa-solid fa-ellipsis-vertical"></i></button></li>
+                        <li class="mobileView"><button class="btn-mdl hoverChange moreOptionBtn"><span class="whenOff">More Option</span><span
+                                                class="whenOn">More Option panel</span><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button></li>
+                        <li><button class="btn-mdl"><span class="whenOff whenOn">Leave call</span><i
+                                    class="fa-solid fa-phone-flip"></i></button></li>
+                    </ul>
+                </div>
+                <!-- action panel  -->
+                <div class="action-panel">
+                    <ul>
+                        <li><span></span><button class="btn-action" id="meetinfo"><span class="whenOff">Meeting
+                                    Details</span><i class="fa-solid fa-circle-info"></i></button></li>
+                        <li><span></span><button class="btn-action" id="users"><span class="whenOff">People</span><i
+                                    class="fa-solid fa-user-group"></i></button> <span class="count-badge">3</span></li>
+                        <li><span></span><button class="btn-action" id="chats"><span class="whenOff">Chat with
+                                    everyone</span><i class="fa-solid fa-message"></i></button></li>
+                        <li><span></span><button class="btn-action" id="activity"><span
+                                    class="whenOff">Activities</span><i class="fa-regular fa-circle-xmark"></i></button>
+                        </li>
+                        <li><span></span><button class="btn-action" id="lock"><span class="whenOff">Host
+                                    controls</span><i class="fa-solid fa-lock"></i></button></li>
+                    </ul>
+                </div>
+                <div class="tabView">
+                    <button class="btn-popup btn-action">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="google-meet.js"></script>
+</body>
+
+</html>
