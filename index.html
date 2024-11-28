@@ -59,7 +59,8 @@
                         <div class="people-name">
                             Pankaj Shinde
                         </div>
-                    </li><li>
+                    </li>
+                    <li>
                         <div class="mute-activity">
                             <i class="fa-solid fa-microphone"></i>
                         </div>
@@ -108,14 +109,16 @@
                         <button class="cross"><i class="fa-solid fa-xmark"></i></button>
                     </div>
                     <div class="joining-info scrollbar">
-                        <h4>Joining info</h4>
-                        <p>https://meet.google.com/aam-goai-oyi</p>
-                        <button class="copylink"><i class="fa-regular fa-copy"></i> Copy joining info</button>
-                        <hr>
-                        <div class="calendar-tag">
-                            <p>Google Calendar attachments will be shown here</p>
+                        <!-- <div class="scrollbar"> -->
+                            <h4>Joining info</h4>
+                            <p>https://meet.google.com/aam-goai-oyi</p>
+                            <button class="copylink"><i class="fa-regular fa-copy"></i> Copy joining info</button>
+                            <hr>
+                            <div class="calendar-tag">
+                                <p>Google Calendar attachments will be shown here</p>
+                            </div>
                         </div>
-                    </div>
+                    <!-- </div> -->
                 </div>
                 <!-- people list -->
                 <div class="action-peoples commonClass users" id="toggleUsers">
@@ -124,7 +127,79 @@
                         <button class="cross"><i class="fa-solid fa-xmark"></i></button>
                     </div>
                     <div class="people-item">
-
+                        <div class="scrollbar">
+                            <div class="button">
+                                <button class="addPeople"><i class="fa-solid fa-user-plus"></i> Add people</button>
+                            </div>
+                            <div class="seachBar">
+                                <div><i class="fa-solid fa-search"></i></div>
+                                <input type="text" class="searchField" placeholder="Search for people" />
+                            </div>
+                            <div class="contributors-container">
+                                <label>IN MEETING</label>
+                                <div class="contributors">
+                                    <div class="ctr-title">
+                                        <div class="ctr-name">Contributors</div>
+                                        <div class="ctr-count">
+                                            <div>1</div>
+                                            <div class="arrowUD"><i class="fa-solid fa-chevron-up"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="ctr-list">
+                                        <ul>
+                                            <li class="ctr-list-inner">
+                                                <div class="ctr-logo">A</div>
+                                                <div class="ctr-info">
+                                                    <div class="ctr-listname">Aniket Devearukhakar</div>
+                                                    <div class="ctr-type">Meeting host</div>
+                                                </div>
+                                                <div class="ctr-actions">
+                                                    <div class="ctr-mute"><i class="fa-solid fa-microphone"></i></div>
+                                                    <div class="ctr-actionBtn"><i
+                                                            class="fa-solid fa-ellipsis-vertical"></i></div>
+                                                </div>
+                                            </li>
+                                            <li class="ctr-list-inner">
+                                                <div class="ctr-logo">A</div>
+                                                <div class="ctr-info">
+                                                    <div class="ctr-listname">Aniket Madhukar</div>
+                                                    <div class="ctr-type">Meeting users</div>
+                                                </div>
+                                                <div class="ctr-actions">
+                                                    <div class="ctr-mute"><i class="fa-solid fa-microphone"></i></div>
+                                                    <div class="ctr-actionBtn"><i
+                                                            class="fa-solid fa-ellipsis-vertical"></i></div>
+                                                </div>
+                                            </li>
+                                            <li class="ctr-list-inner">
+                                                <div class="ctr-logo">P</div>
+                                                <div class="ctr-info">
+                                                    <div class="ctr-listname">Pankaj Shinde</div>
+                                                    <div class="ctr-type">Meeting users</div>
+                                                </div>
+                                                <div class="ctr-actions">
+                                                    <div class="ctr-mute"><i class="fa-solid fa-microphone"></i></div>
+                                                    <div class="ctr-actionBtn"><i
+                                                            class="fa-solid fa-ellipsis-vertical"></i></div>
+                                                </div>
+                                            </li>
+                                            <li class="ctr-list-inner">
+                                                <div class="ctr-logo">K</div>
+                                                <div class="ctr-info">
+                                                    <div class="ctr-listname">Kaustubh Gandhi</div>
+                                                    <div class="ctr-type">Meeting users</div>
+                                                </div>
+                                                <div class="ctr-actions">
+                                                    <div class="ctr-mute"><i class="fa-solid fa-microphone"></i></div>
+                                                    <div class="ctr-actionBtn"><i
+                                                            class="fa-solid fa-ellipsis-vertical"></i></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- chatbox -->
@@ -132,6 +207,20 @@
                     <div class="action-header">
                         <h2>In-call messages</h2>
                         <button class="cross"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="message-panel scrollbar">
+                        <div class="everyone-toggle">
+                            <p>Let everyone send messages</p>
+                            <button class="toggleBtn">o</button>
+                        </div>
+                        <div class="message-info">
+                            <p>You can pin a message to make it visible for people who join later. When you leave the
+                                call, you won't be able to access this chat.</p>
+                        </div>
+                        <div class="messageType">
+                            <input type="text" class="msgInput" placeholder="Wend a message to everyone" />
+                            <button class="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
                     </div>
                 </div>
                 <!-- other -->
@@ -164,24 +253,32 @@
                             <ul>
                                 <li><button class="btn-mdl hoverChange"><i
                                             class="fa-solid fa-closed-captioning"></i></button>
-                                            <span class="mobileCaption">Show captions</span></li>
-                                <li><button class="btn-mdl hoverChange"><i
-                                            class="fa-solid fa-square"></i></button>
-                                            <span class="mobileCaption">Present
-                                                now</span></li>
-                                <li><button class="btn-action" id="meetinfo"><i class="fa-solid fa-circle-info"></i></button>
-                                    <span class="mobileCaption">Meeting Details</span></li>
-                                <li><button class="btn-action" id="users"><i
-                                            class="fa-solid fa-user-group"></i></button> <span class="count-badge">3</span>
-                                            <span class="mobileCaption">People</span>
+                                    <span class="mobileCaption">Show captions</span>
                                 </li>
-                                <li><button class="btn-action" id="chats"><i class="fa-solid fa-message"></i></button><span class="mobileCaption">Chat with
-                                    everyone</span></li>
+                                <li><button class="btn-mdl hoverChange"><i class="fa-solid fa-square"></i></button>
+                                    <span class="mobileCaption">Present
+                                        now</span>
+                                </li>
+                                <li><button class="btn-action" id="meetinfo"><i
+                                            class="fa-solid fa-circle-info"></i></button>
+                                    <span class="mobileCaption">Meeting Details</span>
+                                </li>
+                                <li><button class="btn-action" id="users"><i
+                                            class="fa-solid fa-user-group"></i></button>
+                                    <span class="count-badge">3</span>
+                                    <span class="mobileCaption">People</span>
+                                </li>
+                                <li><button class="btn-action" id="chats"><i
+                                            class="fa-solid fa-message"></i></button><span class="mobileCaption">Chat
+                                        with
+                                        everyone</span></li>
                                 <li><button class="btn-action" id="activity"><i
                                             class="fa-regular fa-circle-xmark"></i></button>
-                                            <span class="mobileCaption">Activities</span></li>
-                                <li><button class="btn-action" id="lock"><i class="fa-solid fa-lock"></i></button><span class="mobileCaption">Host
-                                    controls</span></li>
+                                    <span class="mobileCaption">Activities</span>
+                                </li>
+                                <li><button class="btn-action" id="lock"><i class="fa-solid fa-lock"></i></button><span
+                                        class="mobileCaption">Host
+                                        controls</span></li>
                             </ul>
                         </div>
                     </div>
@@ -198,12 +295,13 @@
                         <li class="hideInMob"><button class="btn-mdl hoverChange"><span class="whenOff">Present
                                     now</span><span class="whenOn">You are presenting</span><i
                                     class="fa-solid fa-square"></i></button></li>
-                        <li class="hideInMob"><button class="btn-mdl hoverChange"><span class="whenOff">More Option</span><span
-                                    class="whenOn">More Option panel</span><i
+                        <li class="hideInMob"><button class="btn-mdl hoverChange"><span class="whenOff">More
+                                    Option</span><span class="whenOn">More Option panel</span><i
                                     class="fa-solid fa-ellipsis-vertical"></i></button></li>
-                        <li class="mobileView"><button class="btn-mdl hoverChange moreOptionBtn"><span class="whenOff">More Option</span><span
-                                                class="whenOn">More Option panel</span><i
-                                                class="fa-solid fa-ellipsis-vertical"></i></button></li>
+                        <li class="mobileView"><button class="btn-mdl hoverChange moreOptionBtn"><span
+                                    class="whenOff">More
+                                    Option</span><span class="whenOn">More Option panel</span><i
+                                    class="fa-solid fa-ellipsis-vertical"></i></button></li>
                         <li><button class="btn-mdl"><span class="whenOff whenOn">Leave call</span><i
                                     class="fa-solid fa-phone-flip"></i></button></li>
                     </ul>
