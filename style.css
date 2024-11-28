@@ -668,13 +668,7 @@ button.cross:hover {
     .my-panel {
         bottom: -40px;
     }
-    @keyframes moveRight {
-        0% {
-            width: 0;
-        } 100% {
-            width: 80%;
-        }
-    }
+ 
 }
 
 @media screen and (min-width: 390px) and (max-width: 414px) {
@@ -688,26 +682,12 @@ button.cross:hover {
     .google-meet-main-panel {
         height: calc(100% - 80px);
     }    
-    @keyframes moveRight {
-        0% {
-            width: 0;
-        } 100% {
-            width: 80%;
-        }
-    }
+   
 }
 
 @media screen and (min-width:600px) and (max-width:860px) {
     .tabView {
         display: block;
-    }
-
-    @keyframes moveRight {
-        0% {
-            width: 0;
-        } 100% {
-            width: 80%;
-        }
     }
     
     .action-panel {display: none}
