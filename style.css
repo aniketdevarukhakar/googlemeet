@@ -334,14 +334,12 @@ hr {
     font-weight: 400;
 }
 
-.commonClass,
-.action-toggle {
+.commonClass {
     display: none;
     transition: 0.5s all ease-in-out;
 }
 
-.commonClass.active,
-.action-toggle.active {
+.commonClass.active {
     display: block;
 }
 
@@ -349,16 +347,6 @@ hr {
     height: 40px;
     width: 40px;
     transition: 0.4s all ease-in-out;
-}
-
-#action-toggle {
-    position: relative;
-    right: -30%;
-    transition: 5s all ease-in-out;
-}
-
-#action-toggle.active {
-    right: 0;
 }
 
 button.cross:hover {
@@ -536,11 +524,40 @@ button.cross:hover {
     background: #f1f1f1;
 }
 
+
+.action-toggle {
+    width: 0; 
+    transition: width 5s ease-in-out;
+}
+
+.action-toggle.active {
+    animation: moveRight 0.5s forwards;
+}
+
+@keyframes moveRight {
+    0% {
+        width: 0;
+    } 100% {
+        width: 40%;
+    }
+}
+
 .mobileView, .tabView {
     display: none;
 }
 
+
+
+
 @media screen and (max-width: 600px) {
+    @keyframes moveRight {
+        0% {
+            width: 0;
+        } 100% {
+            width: 80%;
+        }
+    }
+ 
     .time {
         display: none;
     }
@@ -633,7 +650,7 @@ button.cross:hover {
     }
     #action-toggle.active {
         position: absolute;
-        width: 80%;
+        /* width: 80%; */
         right: 3px;
         bottom: 0;
     }
@@ -651,6 +668,13 @@ button.cross:hover {
     .my-panel {
         bottom: -40px;
     }
+    @keyframes moveRight {
+        0% {
+            width: 0;
+        } 100% {
+            width: 80%;
+        }
+    }
 }
 
 @media screen and (min-width: 390px) and (max-width: 414px) {
@@ -664,12 +688,28 @@ button.cross:hover {
     .google-meet-main-panel {
         height: calc(100% - 80px);
     }    
+    @keyframes moveRight {
+        0% {
+            width: 0;
+        } 100% {
+            width: 80%;
+        }
+    }
 }
 
 @media screen and (min-width:600px) and (max-width:860px) {
     .tabView {
         display: block;
     }
+
+    @keyframes moveRight {
+        0% {
+            width: 0;
+        } 100% {
+            width: 80%;
+        }
+    }
+    
     .action-panel {display: none}
     /* .time {display: none;} */
     .action-panel.active {
